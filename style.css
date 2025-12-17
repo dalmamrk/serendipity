@@ -1418,7 +1418,10 @@ button:focus-visible {
 
 .mese {
     flex: 1 1 300px;
-    max-width: 340px;
+    max-width: 100%;
+    /* Allow full width on mobile */
+    min-width: 0;
+    /* Allow shrinking */
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -1446,14 +1449,19 @@ button:focus-visible {
 
 @media (max-width: 768px) {
     .calendar-grid {
-        gap: 6px;
-        /* Slightly more space on mobile if fits */
+        gap: 2px;
+        /* Minimize gap on mobile to fit screen */
     }
 
     .day {
-        /* Ensure cells are large enough */
-        min-height: 44px;
-        min-width: 44px;
+        /* Reduce size to fit 7 columns */
+        min-height: 35px;
+        min-width: 0;
+        /* Allow grid to shrink items */
+        height: auto;
+        aspect-ratio: 1;
+        /* Maintain square shape */
+        font-size: 0.8rem;
     }
 
     /* Stack calendars vertically on mobile */
