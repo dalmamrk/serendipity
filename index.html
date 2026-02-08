@@ -157,28 +157,34 @@
                     <span data-lang="en">Gallery</span>
                 </h2>
                 <div class="gallery-grid">
-                    <div class="gallery-row">
-                        <div class="gallery-item"><img src="IMAGES/soggiorno01.png" alt="Interni del soggiorno"
-                                onclick="openLightbox(1)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(1)"></div>
-                        <div class="gallery-item"><img src="IMAGES/dettaglio_arredamento01.png"
-                                alt="Dettaglio dell'arredamento" onclick="openLightbox(2)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(2)"></div>
-                        <div class="gallery-item"><img src="IMAGES/camera_da_letto01.png" alt="Camera da letto"
-                                onclick="openLightbox(3)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(3)"></div>
-                    </div>
-                    <div class="gallery-row">
-                        <div class="gallery-item"><img src="IMAGES/bagno01.png" alt="Dettaglio bagno"
-                                onclick="openLightbox(4)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(4)"></div>
-                        <div class="gallery-item"><img src="IMAGES/angolo_relax01.png" alt="Angolo relax"
-                                onclick="openLightbox(5)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(5)"></div>
-                        <div class="gallery-item"><img src="IMAGES/vista_esterna01.png" alt="Vista esterna"
-                                onclick="openLightbox(6)" tabindex="0"
-                                onkeypress="if(event.key === 'Enter') openLightbox(6)"></div>
-                    </div>
+                    <!-- 9 Selected Images for Grid (User Requested) -->
+                    <div class="gallery-item"><img src="IMAGES/ingresso_09.webp" alt="Dettaglio ingresso"
+                            onclick="openLightbox(1)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(1)"></div>
+                    <div class="gallery-item"><img src="IMAGES/camera_letto_03.webp" alt="Camera da letto"
+                            onclick="openLightbox(2)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(2)"></div>
+                    <div class="gallery-item"><img src="IMAGES/bagno_04.webp" alt="Dettaglio doccia"
+                            onclick="openLightbox(3)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(3)"></div>
+                    <div class="gallery-item"><img src="IMAGES/bagno_01.webp" alt="Bagno moderno"
+                            onclick="openLightbox(4)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(4)"></div>
+                    <div class="gallery-item"><img src="IMAGES/soggiorno_03.webp" alt="Area living"
+                            onclick="openLightbox(5)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(5)"></div>
+                    <div class="gallery-item"><img src="IMAGES/camera_letto_06.webp" alt="Camera da letto"
+                            onclick="openLightbox(6)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(6)"></div>
+                    <div class="gallery-item"><img src="IMAGES/soggiorno_04.webp" alt="Dettaglio soggiorno"
+                            onclick="openLightbox(7)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(7)"></div>
+                    <div class="gallery-item"><img src="IMAGES/soggiorno_07.webp" alt="Arredamento soggiorno"
+                            onclick="openLightbox(8)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(8)"></div>
+                    <div class="gallery-item"><img src="IMAGES/ingresso_02.webp" alt="Ingresso"
+                            onclick="openLightbox(9)" tabindex="0"
+                            onkeypress="if(event.key === 'Enter') openLightbox(9)"></div>
                 </div>
             </div>
         </section>
@@ -187,36 +193,52 @@
         <div id="lightbox" class="lightbox-container">
             <span class="close-btn" onclick="closeLightbox()">&times;</span>
             <div class="lightbox-content">
-                <div class="lightbox-slide">
-                    <img src="IMAGES/soggiorno01.png" alt="Interni del soggiorno">
-                </div>
-                <div class="lightbox-slide">
-                    <img src="IMAGES/dettaglio_arredamento01.png" alt="Dettaglio dell'arredamento">
-                </div>
-                <div class="lightbox-slide">
-                    <img src="IMAGES/camera_da_letto01.png" alt="Camera da letto">
-                </div>
-                <div class="lightbox-slide">
-                    <img src="IMAGES/bagno01.png" alt="Dettaglio bagno">
-                </div>
-                <div class="lightbox-slide">
-                    <img src="IMAGES/angolo_relax01.png" alt="Angolo relax">
-                </div>
-                <div class="lightbox-slide">
-                    <img src="IMAGES/vista_esterna01.png" alt="Vista esterna">
-                </div>
+                <!-- 1-9: Grid Images (Synced Order) -->
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_09.webp" alt="Dettaglio ingresso"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_03.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_04.webp" alt="Dettaglio doccia"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_01.webp" alt="Bagno moderno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_03.webp" alt="Area living"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_06.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_04.webp" alt="Dettaglio soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_07.webp" alt="Arredamento soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_02.webp" alt="Ingresso"></div>
+
+                <!-- Others (Hidden from grid) -->
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_01.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_01.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_01.webp" alt="Ingresso"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_05.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_02.webp" alt="Bagno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_02.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_05.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_06.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_08.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_10.webp" alt="Soggiorno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/soggiorno_11.webp" alt="Soggiorno"></div>
+
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_02.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_04.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_07.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_08.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_09.webp" alt="Camera da letto"></div>
+                <div class="lightbox-slide"><img src="IMAGES/camera_letto_10.webp" alt="Camera da letto"></div>
+
+                <div class="lightbox-slide"><img src="IMAGES/bagno_03.webp" alt="Bagno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_05.webp" alt="Bagno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_08.webp" alt="Bagno"></div>
+                <div class="lightbox-slide"><img src="IMAGES/bagno_11.webp" alt="Bagno"></div>
+
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_03.webp" alt="Ingresso"></div>
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_04.webp" alt="Ingresso"></div>
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_07.webp" alt="Ingresso"></div>
+                <div class="lightbox-slide"><img src="IMAGES/ingresso_10.webp" alt="Ingresso"></div>
 
                 <a class="prev-btn" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next-btn" onclick="changeSlide(1)">&#10095;</a>
             </div>
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-            </div>
+            <!-- Dots removed for cleaner look with many images, or can be re-added dynamically if strictly needed. Keeping simple 1/N counter logic is often better for large galleries, but keeping code simple here. -->
+            <div class="dots-container" style="display:none;"></div>
         </div>
 
         <!-- --- Location Section --- -->
@@ -244,7 +266,8 @@
                             <li><span data-lang="it">1,3 km dall’Inalpi Arena</span><span data-lang="en">1.3 km from
                                     Inalpi Arena</span></li>
                             <li><span data-lang="it">1,4 km dal Parco Cavalieri di Vittorio Veneto (Piazza
-                                    d’Armi)</span><span data-lang="en">1.4 km from Parco Cavalieri di Vittorio Veneto
+                                    d’Armi)</span><span data-lang="en">1.4 km from Parco Cavalieri di Vittorio
+                                    Veneto
                                     (Piazza d’Armi)</span></li>
                         </ul>
                         <a href="explore.html" class="cta-button read-more-btn cta-secondary">
@@ -268,7 +291,8 @@
             </div>
         </section>
 
-        <!-- --- Prices Section --- -->
+        <!-- --- Prices Section REMOVED (Hidden for now) --- -->
+        <!--
         <section id="prices" class="content-section">
             <div class="container">
                 <h2 class="section-title">
@@ -283,15 +307,18 @@
                         </h3>
                         <p>
                             <span data-lang="it">L'appartamento può ospitare comodamente <strong>fino a 3
-                                    persone</strong>: dispone di una camera da letto matrimoniale e di un divano letto
+                                    persone</strong>: dispone di una camera da letto matrimoniale e di un divano
+                                letto
                                 nel soggiorno.</span>
-                            <span data-lang="en">The apartment comfortably accommodates <strong>up to 3 guests</strong>,
+                            <span data-lang="en">The apartment comfortably accommodates <strong>up to 3
+                                    guests</strong>,
                                 with a double bedroom and a sofa bed in the living room.</span>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        -->
 
         <!-- --- Check-in/Check-out Section --- -->
         <section id="checkin-checkout" class="content-section" style="background-color: var(--light-gray);">
@@ -310,7 +337,8 @@
                         <p><span data-lang="it">Entro le ore 12</span><span data-lang="en">By 12:00 PM</span></p>
                     </div>
                     <div class="card">
-                        <h3><span data-lang="it">Orari Flessibili</span><span data-lang="en">Flexible Times</span></h3>
+                        <h3><span data-lang="it">Orari Flessibili</span><span data-lang="en">Flexible Times</span>
+                        </h3>
                         <p><span data-lang="it">(Possibilità di orari flessibili su richiesta)</span><span
                                 data-lang="en">(Flexible times available on request)</span></p>
                     </div>
@@ -347,7 +375,8 @@
                         </h3>
                         <ul>
                             <li><span data-lang="it">Wi-Fi</span><span data-lang="en">Wi-Fi</span></li>
-                            <li><span data-lang="it">Biancheria da letto e bagno</span><span data-lang="en">Bed linen
+                            <li><span data-lang="it">Biancheria da letto e bagno</span><span data-lang="en">Bed
+                                    linen
                                     and towels</span></li>
                         </ul>
                     </div>
@@ -357,9 +386,11 @@
                             <span data-lang="en">Extra Services (on request)</span>
                         </h3>
                         <ul>
-                            <li><span data-lang="it">Vino o champagne su richiesta</span><span data-lang="en">Wine or
+                            <li><span data-lang="it">Vino o champagne su richiesta</span><span data-lang="en">Wine
+                                    or
                                     champagne</span></li>
-                            <li><span data-lang="it">Servizio spesa</span><span data-lang="en">Grocery delivery</span>
+                            <li><span data-lang="it">Servizio spesa</span><span data-lang="en">Grocery
+                                    delivery</span>
                             </li>
                             <li><span data-lang="it">Lavaggio a secco</span><span data-lang="en">Dry cleaning</span>
                             </li>
@@ -388,7 +419,8 @@
                     <span data-lang="en">Book Your Stay</span>
                 </h2>
                 <p style="max-width: 600px; margin: 0 auto 2rem auto;">
-                    <span data-lang="it">Vivi un'esperienza unica a Torino. Controlla la disponibilità e prenota ora la
+                    <span data-lang="it">Vivi un'esperienza unica a Torino. Controlla la disponibilità e prenota ora
+                        la
                         tua vacanza da sogno.</span>
                     <span data-lang="en">Live a unique experience in Turin. Check availability and book your dream
                         vacation now.</span>
@@ -409,22 +441,19 @@
                 </div>
                 <div id="calendari-container" class="calendar-updated"></div>
                 <div class="cta-buttons-grid">
-                    <div class="cta-row">
-                        <button onclick="generaEmail()" class="cta-button cta-button-red" id="btn-prenota" disabled>
-                            <span data-lang="it">Prenota Direttamente</span>
-                            <span data-lang="en">Book Directly</span>
-                        </button>
-                    </div>
-                    <div class="cta-row">
-                        <a href="#" class="cta-button cta-secondary">
-                            <span data-lang="it">Prenota su Airbnb</span>
-                            <span data-lang="en">Book on Airbnb</span>
-                        </a>
-                        <a href="#" class="cta-button cta-secondary">
-                            <span data-lang="it">Prenota su Booking</span>
-                            <span data-lang="en">Book on Booking</span>
-                        </a>
-                    </div>
+                    <!-- Left: Booking (Secondary) -->
+                    <a href="https://www.booking.com/Share-LTBz0G" target="_blank" class="cta-button cta-booking">
+                        <span data-lang="it">Prenota su Booking</span>
+                        <span data-lang="en">Book on Booking</span>
+                    </a>
+                    <!-- Right: Direct (Primary) -->
+                    <button onclick="generaEmail()" class="cta-button cta-button-red cta-direct" id="btn-prenota"
+                        disabled>
+                        <span data-lang="it">Prenota Direttamente<br><span class="btn-subtitle">(selezionare prima le
+                                date)</span></span>
+                        <span data-lang="en">Book Directly<br><span class="btn-subtitle">(select dates
+                                first)</span></span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -763,7 +792,9 @@ Attendo una vostra comunicazione di conferma ed il link per il pagamento tramite
                     dots[i].className = dots[i].className.replace(" active", "");
                 }
                 slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
+                if (dots.length > 0 && dots[slideIndex - 1]) {
+                    dots[slideIndex - 1].className += " active";
+                }
             }
 
 

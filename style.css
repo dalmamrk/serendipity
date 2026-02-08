@@ -265,7 +265,7 @@ body {
 }
 
 .hero-updated {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMAGES/hero-background.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMAGES/soggiorno_01.webp');
     /* Increased overlay opacity for better contrast */
     background-size: cover;
     min-height: 100vh;
@@ -376,7 +376,7 @@ body {
 /* --- Header & Hero --- */
 .hero-section {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80') center center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMAGES/soggiorno_01.webp') center center/cover no-repeat;
     background-size: cover;
     color: var(--white);
     display: flex;
@@ -623,41 +623,47 @@ body {
 
 /* --- Gallery --- */
 .gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.gallery-row {
     display: grid;
     grid-template-columns: 1fr;
-    /* Mobile-first: single column */
-    gap: 1rem;
+    /* Mobile: 1 column */
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Desktop: 3 columns */
+        max-width: 800px;
+        /* Reduce size by ~30% (from ~1150px) */
+        margin: 0 auto;
+        /* Center the grid */
+    }
 }
 
 .gallery-item {
     overflow: hidden;
     border-radius: 15px;
+    aspect-ratio: 1 / 1;
+    /* Square aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-    /* Increased border-radius */
-    transition: transform 0.4s ease, filter 0.4s ease;
+    /* Cover the square area */
+    transition: transform 0.5s ease, filter 0.5s ease;
     cursor: pointer;
-    min-height: 200px;
-    /* Ensure minimum height */
+    display: block;
 }
 
 @media (hover: hover) and (pointer: fine) {
 
     /* Apply hover only on desktop */
     .gallery-item img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
+        transform: scale(1.08);
+        filter: brightness(1.05);
     }
 }
 
@@ -866,18 +872,64 @@ body {
 .cta-buttons-grid {
     display: flex;
     flex-direction: column;
+    /* Mobile first: stacked */
     gap: 1.5rem;
-    /* Increased vertical spacing for mobile */
     margin-top: 2rem;
+    align-items: center;
+    width: 100%;
 }
 
-.cta-row {
-    display: flex;
-    flex-direction: column;
-    /* Mobile-first: vertical stack */
+@media (min-width: 768px) {
+    .cta-buttons-grid {
+        flex-direction: row;
+        /* Desktop: side-by-side */
+        justify-content: center;
+        gap: 3rem;
+        /* More space between buttons */
+    }
+}
+
+.cta-booking {
+    background-color: #003580 !important;
+    /* Booking.com Blue */
+    color: white !important;
+    border: none !important;
+    display: inline-flex !important;
     align-items: center;
-    gap: 1.5rem;
-    /* Increased vertical margin between buttons */
+    justify-content: center;
+    height: 54px;
+    /* Fixed height to match multi-line button */
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.cta-booking:hover {
+    background-color: #00224f !important;
+    transform: translateY(-5px);
+}
+
+.cta-direct {
+    padding: 0 1.5rem !important;
+    /* Drastically reduced vertical padding to fit 2 lines */
+    line-height: 1.1 !important;
+    height: 54px;
+    /* Fixed height to match neighbor */
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.btn-subtitle {
+    font-size: 0.65em;
+    font-weight: normal;
+    opacity: 0.9;
+    display: block;
+    margin-top: 1px;
+    text-transform: none;
+    /* Keep parenthesis lowercase if needed */
 }
 
 .cta-button {
